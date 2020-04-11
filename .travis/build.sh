@@ -19,4 +19,4 @@ ghcup set 8.8.3
 
 cabal update
 cabal build -fcurl
-cp "$(cabal new-exec sh -- -c 'command -V ghcup')" "./${ARTIFACT}"
+cp "$(cabal new-exec --verbose=0 --offline sh -- -c 'command -v ghcup')" "./${ARTIFACT}"
