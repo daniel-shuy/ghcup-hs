@@ -12,10 +12,11 @@ export PATH="$HOME/.ghcup/bin:$PATH"
 
 ghcup install 8.8.3
 ghcup install-cabal 3.2.0.0
+ghcup set 8.8.3
 
 
 ## install ghcup
 
 cabal update
-cabal build -fcurl --ghc-options='-split-sections -optl-static'
+cabal build -fcurl --ghc-options='-optl-static'
 cp "$(cabal new-exec sh -- -c 'command -V ghcup')" "./${ARTIFACT}"
