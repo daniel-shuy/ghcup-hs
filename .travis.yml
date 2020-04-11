@@ -4,6 +4,15 @@ jobs:
       osx_image: xcode6.4
       language: generic
       env: ARTIFACT=x86_64-apple-darwin-10.10-ghcup
+      addons:
+        homebrew:
+          packages:
+          - curl
+          - libffi
+          - libiconv
+          - make
+          - ncurses
+          - xz
 
 script: ".travis/build.sh"
 
