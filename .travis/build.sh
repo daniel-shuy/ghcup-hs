@@ -18,5 +18,5 @@ ghcup set 8.8.3
 ## install ghcup
 
 cabal update
-cabal build -fcurl --ghc-options='-optl-static'
+cabal build -fcurl
 cp "$(cabal new-exec sh -- -c 'command -V ghcup')" "./${ARTIFACT}"
